@@ -1,18 +1,28 @@
-import { motion } from "framer-motion";
+import { motion,useTransform,useMotionValue } from "framer-motion";
 import "./App.css";
 
 function App() {
+  const x=useMotionValue(0)
+  const background = useTransform(
+    x,
+    [-100, 0, 100],
+    ["#a0d", "rgba(0,0,0,0)", "#0bf"]
+);
+
+
+  
   return (
     <>
-      <div className="App">
+      <motion.div className="App"
+      style={{backgroundColor:background}}
+      >
         <motion.div className="center"
-        initial={{scale:0}}
-        animate={{scale:1, rotate:360}}
-        transition={{duration:0.5,
-          delay:1,
-        }}
+        drag="x"
+        style={{x}}
+        whileTap={{cursor:"grabbing"}}
+        dragConstraints={{ right: 0, left: 0 }}
         ></motion.div>
-      </div>
+      </motion.div>
     </>
   );
 }
