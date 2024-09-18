@@ -17,10 +17,16 @@ function App() {
       style={{backgroundColor:background}}
       >
         <motion.div className="center"
-        drag="x"
+        
         style={{x}}
-        whileTap={{cursor:"grabbing"}}
-        dragConstraints={{ right: 0, left: 0 }}
+        animate={{x:[-100,0,100],
+          transition:{
+            repeat:Infinity,
+            repeatType:'reverse',
+            repeatDelay:1,
+          
+          }
+        }}
         ></motion.div>
       </motion.div>
     </>
