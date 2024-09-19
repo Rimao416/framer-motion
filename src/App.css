@@ -1,63 +1,70 @@
-.app-container {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #101010;
-    color: white;
-  }
-  
-  .chat-container, .profile-container {
-    width: 90%;
-    max-width: 400px;
-    background-color: #1a1a1a;
-    border-radius: 15px;
-    padding: 20px;
-  }
-  
-  .chat-header {
-    display: flex;
-    align-items: center;
-  }
-  
-  .profile-thumbnail img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  .chat-title h2 {
-    margin-left: 10px;
-    font-size: 18px;
-  }
-  
-  .chat-messages {
-    margin-top: 20px;
-  }
-  
-  .profile-container {
-    text-align: center;
-  }
-  
-  .back-button {
+    min-height: 100vh;
+    background: #f7f7f7;
+}
+.box{
+    position: relative;
+    width: 300px;
+    height: 600px;
+    background: #666;
+    border-radius: 50px;
+}
+.box::before{
+    content: '';
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .profile-picture-large img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto;
-  }
-  
-  .profile-info h2 {
-    margin-top: 20px;
-  }
-  
+    inset: 3px;
+    background: #000;
+    border-radius: 48px;
+}
+.inner{
+    position: absolute;
+    inset: 3px;
+    background: url("../src/assets/pattern.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 48px;
+    border: 10px solid #000;
+    display: flex;
+    justify-content: center;
+    /* opacity: 0; */
+}
+.btn{
+    position: absolute;
+    top:110px;
+    left: -2px;
+    width:3px;
+    height: 3px;
+    height: 26px;
+    width: 3px;
+    height: 26px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background: radial-gradient(#ccc,#666,#222);
+}
+.btn.btn2{
+    top:160px;
+    height: 40px;
+}
+.btn.btn3{
+    top:220px;
+    height: 40px;
+}
+.rightSideBtn {
+    position: absolute;
+    top:170px;
+    right: -2px;
+    height: 70px;
+    width: 3px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background: radial-gradient(#ccc,#666,#222);   
+}

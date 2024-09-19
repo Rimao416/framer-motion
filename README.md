@@ -1,4 +1,3 @@
-# Jour 2: Animate
+# Jour 11: Iphone Mockup
 
-Dans ce deuxième jour, nous essayons de faire une simple animation 360 Degré
-![Image de l'animation](/src/assets/jour_2.png)
+Nous avons travaillé sur le mockup de l'iphone
